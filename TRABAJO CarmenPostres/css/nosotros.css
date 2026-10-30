@@ -1,0 +1,1100 @@
+:root {
+    --crema: #FFF8F1;
+    --crema-oscuro: #F6E9DD;
+    --rosa-suave: #E8C8BD;
+    --rosa: #D9A99A;
+    --rosa-fuerte: #C98F7E;
+    --terracota: #A96752;
+    --terracota-oscuro: #874C3D;
+    --cafe: #5A4038;
+    --cafe-suave: #765A50;
+    --texto: #4B3A35;
+    --texto-suave: #806F69;
+    --blanco: #FFFFFF;
+    --sombra: rgba(90, 64, 56, 0.12);
+}
+
+/* =====================================================
+   REINICIO Y ESTILOS GENERALES
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto);
+    line-height: 1.7;
+    min-height: 100vh;
+
+    /* Fotografía decorativa de fondo */
+    background-color: var(--crema);
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 241, 0.84),
+            rgba(255, 248, 241, 0.84)
+        ),
+        url("../imagen/Baner.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+
+.header {
+    width: 100%;
+    min-height: 90px;
+    padding: 12px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background: rgba(255, 248, 241, 0.97);
+    border-bottom: 1px solid rgba(201, 143, 126, 0.2);
+    box-shadow: 0 3px 18px var(--sombra);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* =====================================================
+    LOGO
+   ===================================================== */
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.header .logo img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-nombre {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--terracota);
+}
+
+.logo-lema {
+    margin-top: 4px;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--texto-suave);
+}
+
+/* =====================================================
+   NAVEGACIÓN
+   ===================================================== */
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.header .nav > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 8px 10px;
+    border-radius: 22px;
+
+    color: var(--texto);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.header .nav > a:not(.nav-btn-icon):hover,
+.header .nav > a.active {
+    color: var(--terracota);
+    background-color: var(--crema-oscuro);
+}
+
+/* =====================================================
+   BOTONES DE REDES SOCIALES
+   ===================================================== */
+
+.header .nav .nav-btn-icon {
+    background-color: var(--rosa-suave);
+    color: var(--terracota-oscuro);
+    font-weight: 600;
+    font-size: 0.78rem;
+    padding: 8px 12px;
+}
+
+.nav-btn-icon svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.header .nav .nav-btn-icon:hover {
+    background-color: var(--terracota);
+    color: var(--blanco);
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   BOTONES GENERALES
+   ===================================================== */
+
+.nos-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 13px 28px;
+    border-radius: 30px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.nos-btn-principal {
+    background-color: var(--terracota);
+    color: var(--blanco);
+    box-shadow: 0 8px 20px rgba(78, 48, 40, 0.18);
+}
+
+.nos-btn-principal:hover {
+    background-color: var(--terracota-oscuro);
+    transform: translateY(-3px);
+}
+
+.nos-btn-secundario {
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1px solid var(--terracota);
+    color: var(--terracota);
+}
+
+.nos-btn-secundario:hover {
+    background-color: var(--terracota);
+    color: var(--blanco);
+    transform: translateY(-3px);
+}
+
+/* =====================================================
+   PORTADA: CONOCE NUESTRA HISTORIA
+   ===================================================== */
+
+.nos-portada {
+    width: 100%;
+    min-height: 510px;
+    padding: 55px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 55px;
+
+    /* La sección no debe tener un cuadro exterior */
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+
+    position: relative;
+    isolation: isolate;
+}
+
+.nos-portada-texto {
+    width: 100%;
+    max-width: 620px;
+    justify-self: end;
+}
+
+.nos-etiqueta {
+    margin-bottom: 12px;
+
+    color: var(--terracota);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nos-portada h1 {
+    margin-bottom: 20px;
+
+    color: var(--cafe);
+    font-size: clamp(2.5rem, 4.2vw, 4rem);
+    line-height: 1.15;
+}
+
+.nos-intro {
+    margin-bottom: 28px;
+
+    color: var(--texto);
+    font-size: 0.98rem;
+    line-height: 1.9;
+    max-width: 560px;
+}
+
+/* =====================================================
+   FOTOGRAFÍAS
+   ===================================================== */
+
+.nos-foto {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    margin: 0;
+
+    background-color: var(--crema-oscuro);
+    border: 5px solid var(--blanco);
+    border-radius: 24px;
+
+    box-shadow: 0 12px 32px var(--sombra);
+}
+
+.nos-foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+.nos-foto:hover img {
+    transform: scale(1.035);
+}
+
+.nos-foto-portada {
+    max-width: 420px;
+    height: 470px;
+    justify-self: center;
+}
+
+.nos-foto-portada figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 28px 15px 14px;
+
+    color: var(--blanco);
+    font-size: 0.82rem;
+    text-align: center;
+
+    background: linear-gradient(
+        transparent,
+        rgba(78, 48, 40, 0.75)
+    );
+}
+
+/* =====================================================
+   TÍTULOS DE LAS SECCIONES
+   ===================================================== */
+
+.nos-titulo-seccion {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.nos-titulo-seccion > span {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--terracota);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nos-titulo-seccion h2,
+.nos-quienes h2 {
+    margin-bottom: 15px;
+
+    color: var(--cafe);
+    font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+    line-height: 1.25;
+}
+
+.nos-titulo-seccion p {
+    color: var(--texto-suave);
+}
+
+/* =====================================================
+   HISTORIA DEL EMPRENDIMIENTO
+   ===================================================== */
+
+.nos-seccion {
+    padding: 75px 6%;
+}
+
+.nos-historia {
+    background-color: rgba(246, 233, 221, 0.94);
+    text-align: center;
+}
+
+.nos-historia > p {
+    max-width: 850px;
+    margin: 0 auto;
+
+    color: var(--texto-suave);
+    font-size: 0.96rem;
+    line-height: 1.95;
+}
+
+/* =====================================================
+   SECCIÓN QUIÉNES SOMOS
+   ===================================================== */
+
+.nos-quienes {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 55px;
+
+    background-color: rgba(255, 248, 241, 0.40);
+}
+
+.nos-quienes-texto {
+    min-width: 0;
+}
+
+.nos-quienes-texto > p {
+    margin-bottom: 16px;
+
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.nos-titulo-izquierda {
+    margin: 0 0 25px;
+    text-align: left;
+}
+
+/* =====================================================
+   MAPA
+   ===================================================== */
+
+.nos-mapa {
+    width: 100%;
+    margin-top: 25px;
+    overflow: hidden;
+
+    border: 5px solid var(--blanco);
+    border-radius: 18px;
+    outline: 1px solid var(--rosa-suave);
+
+    box-shadow: 0 10px 28px var(--sombra);
+}
+
+.nos-mapa iframe {
+    display: block;
+    width: 100%;
+    height: 260px;
+    border: 0;
+}
+
+/* =====================================================
+   FRASE Y FOTO SECUNDARIA
+   ===================================================== */
+
+.nos-cita {
+    padding: 30px;
+    text-align: center;
+
+    background-color: rgba(246, 233, 221, 0.90);
+    border: 1px solid rgba(217, 169, 154, 0.35);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px var(--sombra);
+}
+
+.nos-comillas {
+    display: block;
+    height: 65px;
+
+    color: var(--terracota);
+    font-family: Georgia, serif;
+    font-size: 5rem;
+    line-height: 1.1;
+}
+
+.nos-cita > p {
+    margin-bottom: 25px;
+
+    color: var(--cafe);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.nos-foto-secundaria {
+    height: 310px;
+    border-radius: 16px;
+}
+
+.nos-foto-secundaria img {
+    object-position: center;
+}
+
+/* =====================================================
+   ¿QUÉ NOS HACE ESPECIALES?
+   ===================================================== */
+
+.nos-seccion-ancha {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    /* No crear el marco que aparecía en la captura */
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    background-color: transparent;
+}
+
+.nos-especiales-titulo {
+    max-width: 880px;
+    padding: 0;
+    margin: 0 auto 38px;
+
+    /* Título libre, sin tarjeta ni caja */
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.nos-especiales-titulo h2 {
+    margin-bottom: 16px;
+    color: var(--cafe);
+}
+
+.nos-especiales-titulo p {
+    max-width: 650px;
+    margin: 0 auto;
+
+    color: var(--texto-suave);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   TARJETAS DE CARACTERÍSTICAS
+   ===================================================== */
+
+.nos-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.nos-tarjeta {
+    min-width: 0;
+    padding: 35px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--blanco);
+    border: 1px solid var(--rosa-suave);
+    border-radius: 20px;
+
+    text-align: center;
+    box-shadow: 0 8px 25px var(--sombra);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.nos-tarjeta:hover {
+    transform: translateY(-6px);
+    border-color: var(--terracota);
+    box-shadow: 0 14px 32px rgba(90, 64, 56, 0.16);
+}
+
+.nos-icono {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    border-radius: 50%;
+
+    background-color: var(--rosa-suave);
+    color: var(--terracota-oscuro);
+
+    font-size: 1.7rem;
+}
+
+.nos-tarjeta h3 {
+    margin-bottom: 12px;
+
+    color: var(--cafe);
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.nos-tarjeta p {
+    color: var(--texto-suave);
+    font-size: 0.91rem;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   MISIÓN Y VISIÓN
+   ===================================================== */
+
+.nos-mision-vision {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.nos-bloque {
+    padding: 35px;
+
+    background-color: rgba(246, 233, 221, 0.96);
+    border: 1px solid rgba(201, 143, 126, 0.25);
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px var(--sombra);
+}
+
+.nos-bloque-etiqueta {
+    display: block;
+    margin-bottom: 10px;
+
+    color: var(--terracota);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.nos-bloque h2 {
+    margin-bottom: 15px;
+    color: var(--cafe);
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.nos-bloque p {
+    color: var(--texto-suave);
+    font-size: 0.94rem;
+    line-height: 1.9;
+}
+
+.nos-bloque-oscuro {
+    background-color: var(--cafe);
+    border-color: var(--cafe);
+}
+
+.nos-bloque-oscuro h2,
+.nos-bloque-oscuro p {
+    color: var(--blanco);
+}
+
+.nos-bloque-oscuro .nos-bloque-etiqueta {
+    color: #F1C7B6;
+}
+
+/* =====================================================
+   INVITACIÓN FINAL
+   ===================================================== */
+
+.nos-final {
+    max-width: 1150px;
+    margin: 25px auto 75px;
+    padding: 65px 6%;
+
+    background: linear-gradient(
+        135deg,
+        rgba(246, 233, 221, 0.97),
+        rgba(232, 200, 189, 0.97)
+    );
+
+    border: 1px solid rgba(201, 143, 126, 0.2);
+    border-radius: 25px;
+
+    text-align: center;
+}
+
+.nos-final h2 {
+    max-width: 800px;
+    margin: 0 auto 18px;
+
+    color: var(--cafe);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    line-height: 1.3;
+}
+
+.nos-final > p:not(.nos-etiqueta) {
+    max-width: 650px;
+    margin: 0 auto 28px;
+
+    color: var(--texto);
+    font-size: 0.96rem;
+}
+
+.nos-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* =====================================================
+   PIE DE PÁGINA
+   ===================================================== */
+
+.nos-footer {
+    padding: 40px 5% 20px;
+
+    background-color: var(--cafe);
+    color: #EBDDD5;
+
+    text-align: center;
+}
+
+.nos-footer-enlaces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+
+    margin-bottom: 24px;
+}
+
+.nos-footer-enlaces a {
+    color: #EBDDD5;
+    font-size: 0.84rem;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.nos-footer-enlaces a:hover,
+.nos-footer-enlaces a[aria-current="page"] {
+    color: #F1C7B6;
+}
+
+.nos-footer-enlaces a[aria-current="page"] {
+    font-weight: 700;
+}
+
+.nos-copyright {
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: #D0BDB4;
+    font-size: 0.76rem;
+}
+
+/* =====================================================
+   TABLETS Y PANTALLAS MEDIANAS
+   ===================================================== */
+
+@media (max-width: 1050px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 4%;
+    }
+
+    .header .nav {
+        justify-content: center;
+    }
+
+    .nos-portada {
+        padding: 45px 5%;
+        gap: 35px;
+    }
+
+    .nos-foto-portada {
+        max-width: 360px;
+        height: 410px;
+    }
+
+    .nos-quienes {
+        gap: 30px;
+    }
+
+    .nos-seccion {
+        padding: 60px 5%;
+    }
+
+    .nos-tarjetas {
+        gap: 18px;
+    }
+
+    .nos-tarjeta {
+        padding: 28px 18px;
+    }
+
+    .nos-final {
+        width: calc(100% - 50px);
+    }
+}
+
+/* =====================================================
+   CELULARES
+   ===================================================== */
+
+@media (max-width: 650px) {
+    html {
+        scroll-padding-top: 160px;
+    }
+
+    body {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+
+    .header {
+        padding: 12px 15px;
+        gap: 12px;
+    }
+
+    .header .logo img {
+        width: 53px;
+        height: 53px;
+    }
+
+    .logo-nombre {
+        font-size: 1.25rem;
+    }
+
+    .logo-lema {
+        font-size: 0.62rem;
+    }
+
+    .header .nav {
+        width: 100%;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .header .nav > a {
+        padding: 7px 8px;
+        font-size: 0.73rem;
+    }
+
+    .header .nav .nav-btn-icon {
+        padding: 7px 9px;
+    }
+
+    .header .nav .nav-btn-icon span {
+        display: none;
+    }
+
+    .header .nav .nav-btn-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Portada sin cuadro */
+    .nos-portada {
+        min-height: auto;
+        padding: 48px 22px;
+
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .nos-portada-texto {
+        max-width: 100%;
+        justify-self: stretch;
+    }
+
+    .nos-portada h1 {
+        font-size: clamp(2.3rem, 9vw, 3rem);
+    }
+
+    .nos-intro {
+        font-size: 0.93rem;
+    }
+
+    .nos-foto-portada {
+        width: 100%;
+        max-width: 320px;
+        height: 320px;
+        margin: 0 auto;
+    }
+
+    /* Secciones */
+    .nos-seccion {
+        padding: 48px 20px;
+    }
+
+    .nos-historia {
+        background-color: rgba(246, 233, 221, 0.96);
+    }
+
+    .nos-historia > p {
+        font-size: 0.91rem;
+        line-height: 1.85;
+    }
+
+    .nos-quienes {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        background-color: rgba(255, 248, 241, 0.40);
+    }
+
+    .nos-titulo-izquierda {
+        text-align: left;
+    }
+
+    .nos-quienes-texto > p {
+        font-size: 0.92rem;
+    }
+
+    .nos-mapa iframe {
+        height: 230px;
+    }
+
+    .nos-cita {
+        padding: 25px 20px;
+    }
+
+    .nos-cita > p {
+        font-size: 1.2rem;
+    }
+
+    .nos-foto-secundaria {
+        height: 260px;
+    }
+
+    /* Título de características sin marco */
+    .nos-especiales-titulo {
+        padding: 0;
+        margin-bottom: 28px;
+
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .nos-especiales-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .nos-especiales-titulo p {
+        font-size: 0.92rem;
+    }
+
+    .nos-tarjetas {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .nos-tarjeta {
+        padding: 28px 22px;
+    }
+
+    .nos-icono {
+        width: 58px;
+        height: 58px;
+    }
+
+    /* Misión y visión */
+    .nos-mision-vision {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .nos-bloque {
+        padding: 28px 22px;
+    }
+
+    .nos-bloque h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Invitación */
+    .nos-final {
+        width: calc(100% - 30px);
+        margin: 10px auto 45px;
+        padding: 42px 20px;
+    }
+
+    .nos-final h2 {
+        font-size: 2rem;
+    }
+
+    .nos-botones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nos-btn {
+        width: 100%;
+    }
+
+    /* Pie de página */
+    .nos-footer {
+        padding: 35px 20px 20px;
+    }
+
+    .nos-footer-enlaces {
+        gap: 12px 16px;
+    }
+}
+
+/* =====================================================
+   CELULARES PEQUEÑOS
+   ===================================================== */
+
+@media (max-width: 380px) {
+    .header .nav > a {
+        padding: 6px;
+        font-size: 0.68rem;
+    }
+
+    .nos-portada {
+        padding: 38px 17px;
+    }
+
+    .nos-portada h1 {
+        font-size: 2.1rem;
+    }
+
+    .nos-foto-portada {
+        height: 270px;
+    }
+
+    .nos-seccion {
+        padding: 42px 17px;
+    }
+
+    .nos-titulo-seccion h2,
+    .nos-quienes h2 {
+        font-size: 1.8rem;
+    }
+
+    .nos-tarjeta {
+        padding: 25px 17px;
+    }
+
+    .nos-final {
+        padding: 35px 17px;
+    }
+}
+
+/* =====================================================
+   ACCESIBILIDAD
+   ===================================================== */
+
+.header a:focus-visible,
+.nos-btn:focus-visible,
+.nos-footer-enlaces a:focus-visible {
+    outline: 2px solid var(--terracota);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

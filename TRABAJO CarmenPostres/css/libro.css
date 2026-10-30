@@ -1,0 +1,198 @@
+.header {
+    height: auto;
+    min-height: 72px;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 2px;
+}
+
+.nav a {
+    font-size: 15px;
+    padding: 8px 12px;
+}
+
+.nav a[aria-current="page"] {
+    background-color: #f5e7dd;
+    color: #a45d5d;
+}
+
+.pie-enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 18px;
+    margin-bottom: 10px;
+}
+
+.pie-enlaces a {
+    color: #7b3f3f;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pie-enlaces a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   SELECT DEL FORMULARIO
+   ========================================= */
+
+.campo select {
+    width: 100%;
+    border: 1px solid #cdb9b1;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #4a3025;
+    transition: 0.3s;
+}
+
+.campo select:focus {
+    outline: none;
+    border-color: #a45d5d;
+    box-shadow: 0 0 0 3px rgba(164, 93, 93, 0.15);
+}
+
+
+/* =========================================
+   CAMPOS EN DOS COLUMNAS
+   ========================================= */
+
+.rc-fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+}
+
+
+/* =========================================
+   DATOS DEL PROVEEDOR
+   ========================================= */
+
+.rc-proveedor {
+    background: #fff5ef;
+    border: 1px solid #e5c8bc;
+    border-left: 5px solid #a45d5d;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 25px;
+}
+
+.rc-proveedor h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    color: #7b3f3f;
+    margin-bottom: 12px;
+}
+
+.rc-proveedor dl div {
+    margin-bottom: 10px;
+}
+
+.rc-proveedor dt {
+    font-size: 13px;
+    font-weight: bold;
+    color: #765e57;
+}
+
+.rc-proveedor dd {
+    font-size: 15px;
+    color: #4a3025;
+}
+
+
+/* =========================================
+   ETIQUETA DEL TIPO DE RECLAMACIÓN
+   ========================================= */
+
+.rc-etiqueta {
+    font-weight: bold;
+    color: #563f39;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   AVISO DE PRIVACIDAD E INFORMACIÓN
+   ========================================= */
+
+.rc-privacidad,
+.rc-info {
+    background: #fff5ef;
+    border: 1px solid #e5c8bc;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #563f39;
+}
+
+.rc-info ul {
+    margin: 6px 0 0 20px;
+}
+
+
+/* =========================================
+   MENSAJE DEL ENVÍO
+   ========================================= */
+
+.rc-mensaje {
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.rc-mensaje[hidden] {
+    display: none;
+}
+
+.rc-mensaje-error {
+    background: #fff5f5;
+    border: 1px solid #c94b4b;
+    color: #7a2a2a;
+}
+
+.rc-mensaje-ok {
+    background: #f7fff8;
+    border: 1px solid #6a9b70;
+    color: #2f5a35;
+}
+
+
+/* =========================================
+   BOTÓN DESHABILITADO
+   ========================================= */
+
+.botones button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   ADAPTACIÓN A CELULARES
+   ========================================= */
+
+@media (max-width: 700px) {
+    .nav {
+        justify-content: center;
+    }
+
+    .rc-fila {
+        grid-template-columns: 1fr;
+    }
+}

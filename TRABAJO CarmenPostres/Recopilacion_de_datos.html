@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="U_EyLVXK940vu_S6b03vDSzMT4mm-wEIPceVsvPC4Ns" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- SEO ON-PAGE -->
+    <title>Realiza tu Pedido Online | Carmen Postres Caseros en Callao</title>
+    <meta name="description" content="Completa nuestro formulario online para programar tu pedido de kekes caseros, tortas y postres en Callao. Elige recojo en tienda o delivery.">
+    <meta name="keywords" content="pedir postres online, delivery de tortas Callao, formulario de pedidos pastelería, comprar kekes caseros">
+    <link rel="stylesheet" href="Datos.css">
+    <link rel="stylesheet" href="./css/nosotros.css">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/jpeg" href="imagen/Logo ofi.png">
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         ENCABEZADO
+         ========================================= -->
+
+  <header class="header">
+        <a class="logo" href="index.html">
+            <img src="imagen/Logo ofi.png" alt="Logo de Carmen Postres Caseros">
+            <span class="logo-text">
+                <span class="logo-nombre">Carmen</span>
+                <span class="logo-lema">Postres caseros</span>
+            </span>
+        </a>
+
+        <nav class="nav" aria-label="Menú principal">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="Recopilacion_de_datos.html" class="active" aria-current="page">Pedidos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="libro.html">Reclamaciones</a>
+
+            <a href="https://www.instagram.com/pasteleria_carmen78/"
+               target="_blank" rel="noopener noreferrer"
+               class="nav-btn-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="17.5" cy="6.5" r="1"></circle>
+                </svg>
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://www.facebook.com/share/1EcPQEwdfW/"
+               target="_blank" rel="noopener noreferrer"
+               class="nav-btn-icon" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V7a1 1 0 0 1 1-1h3V2z"></path>
+                </svg>
+                <span>Facebook</span>
+            </a>
+
+            <a href="mailto:contacto@pasteleriadcarmen.pe"
+               class="nav-btn-icon icon-only" aria-label="Enviar correo">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <polyline points="3,7 12,13 21,7"></polyline>
+                </svg>
+            </a>
+        </nav>
+    </header> 
+
+
+
+
+    <!-- =========================================
+         TÍTULO DEL FORMULARIO
+         ========================================= -->
+
+    <section class="titulo-formulario">
+
+
+        <h1>
+
+            Carmen Postres Caseros
+
+        </h1>
+
+
+        <h2>
+
+            Realiza tu pedido
+
+        </h2>
+
+
+        <p>
+
+            Completa el siguiente formulario y prepararemos tu pedido
+            con mucho cariño.
+
+        </p>
+
+
+    </section>
+
+
+
+
+    <!-- =========================================
+         CONTENIDO DEL FORMULARIO
+         ========================================= -->
+
+    <main class="contenedor">
+
+
+        <form
+            action="#"
+            method="post"
+            autocomplete="on"
+        >
+
+
+
+            <!-- =========================================
+                 DATOS DEL CLIENTE
+                 ========================================= -->
+
+            <fieldset>
+
+
+                <legend>
+
+                    Datos del cliente
+
+                </legend>
+
+
+
+                <!-- NOMBRE -->
+
+                <div class="campo">
+
+
+                    <label for="nombre">
+
+                        Nombre completo:
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ingrese sus nombres y apellidos"
+                        required
+                        autofocus
+                        autocomplete="name"
+                    >
+
+
+                </div>
+
+
+
+                <!-- CORREO -->
+
+                <div class="campo">
+
+
+                    <label for="correo">
+
+                        Correo electrónico:
+
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="Ingrese su correo"
+                        required
+                        autocomplete="email"
+                    >
+
+
+                </div>
+
+
+
+                <!-- CELULAR -->
+
+                <div class="campo">
+
+
+                    <label for="celular">
+
+                        Celular:
+
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        id="celular"
+                        name="celular"
+                        placeholder="Ingrese su numero"
+                        pattern="[0-9]{9}"
+                        maxlength="9"
+                        required
+                        autocomplete="tel"
+                    >
+
+
+                    <small>
+
+                        Ingrese 9 números.
+
+                    </small>
+
+
+                </div>
+
+
+            </fieldset>
+
+
+
+
+            <!-- =========================================
+                 DATOS DEL PEDIDO
+                 ========================================= -->
+
+            <fieldset>
+
+
+                <legend>
+
+                    Datos del pedido
+
+                </legend>
+
+
+
+                <!-- PRODUCTO -->
+
+                <div class="campo">
+
+
+                    <label for="producto">
+
+                        Producto:
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="producto"
+                        name="producto"
+                        list="productos"
+                        placeholder="Seleccione o escriba un producto"
+                        required
+                    >
+
+
+
+                    <datalist id="productos">
+
+
+                        <option value="Keke Casero">
+
+                        <option value="Keke de Vainilla con Chin Chin">
+
+                        <option value="Postre Casero">
+
+                        <option value="Especialidad de la Casa">
+
+                        <option value="Keke Marmoleado">
+
+                        <option value="Cupcakes">
+
+                        <option value="Selva Negra">
+
+                        <option value="Tres Leches">
+
+                        <option value="Cheesecake">
+
+                        <option value="Muffins">
+
+                        <option value="Brownies">
+
+                        <option value="Empanadas">
+
+                        <option value="Sándwiches">
+
+
+                    </datalist>
+
+
+                </div>
+
+
+
+                <!-- FECHA -->
+
+                <div class="campo">
+
+
+                    <label for="fecha">
+
+                        Fecha del pedido:
+
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha"
+                        required
+                    >
+
+
+                </div>
+
+
+
+                <!-- HORA -->
+
+                <div class="campo">
+
+
+                    <label for="hora">
+
+                        Hora de entrega:
+
+                    </label>
+
+
+                    <input
+                        type="time"
+                        id="hora"
+                        name="hora"
+                        required
+                    >
+
+
+                </div>
+
+
+            </fieldset>
+
+
+
+
+            <!-- =========================================
+                 TIPO DE ENTREGA
+                 ========================================= -->
+
+            <fieldset>
+
+
+                <legend>
+
+                    Tipo de entrega
+
+                </legend>
+
+
+
+                <!-- OPCIONES -->
+
+                <div class="opciones">
+
+
+                    <!-- RECOJO EN TIENDA -->
+
+                    <div class="opcion">
+
+
+                        <input
+                            type="radio"
+                            id="tienda"
+                            name="entrega"
+                            value="Recojo en tienda"
+                            checked
+                        >
+
+
+                        <label for="tienda">
+
+                            Recojo en tienda
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <!-- DELIVERY -->
+
+                    <div class="opcion">
+
+
+                        <input
+                            type="radio"
+                            id="delivery"
+                            name="entrega"
+                            value="Delivery"
+                        >
+
+
+                        <label for="delivery">
+
+                            Delivery
+
+                        </label>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <!-- =========================================
+                     INFORMACIÓN DE LA TIENDA
+                     SOLO SE MUESTRA EN RECOJO
+                     ========================================= -->
+
+                <div
+                    id="info-tienda"
+                    class="info-tienda"
+                >
+
+
+                    <div class="nota-tienda">
+
+
+                        <!-- INFORMACIÓN -->
+
+                        <div class="datos-tienda">
+
+
+                            <div class="titulo-tienda">
+
+                                Punto de recojo
+
+                            </div>
+
+
+
+                            <p class="direccion-tienda">
+
+                                <strong>
+                                    Manuel Soane Mz.K - Lt.5
+                                </strong>
+
+                            </p>
+
+                            <!-- BOTÓN GOOGLE MAPS -->
+
+                            <a
+                                href="https://www.google.com/maps/place/Avenida+Victor+Andr%C3%A9s+Belaunde+Diez+Canseco+Mz.K+-+Lt.1,+Callao+07046/@-12.0230082,-77.1368415,21z/data=!4m6!3m5!1s0x9105cc42acf43eef:0xd9a6b63e377c0d03!8m2!3d-12.0228329!4d-77.1368107!16s%2Fg%2F11j1ld969_?entry=ttu&g_ep=EgoyMDI2MDkwOC4wIKXMDSoASAFQAw%3D%3D"
+                                rel="noopener noreferrer"
+                                class="btn-mapa"
+                            >
+
+                                 Abrir en Google Maps
+
+                            </a>
+
+
+                        </div>
+
+                        <!-- =========================================
+                             MAPA
+                             ========================================= -->
+
+                        <div class="mapa-tienda">
+
+                            <iframe
+                                src="https://www.google.com/maps?q=-12.0228329,-77.1368107&z=18&output=embed"
+                                width="100%"
+                                height="180"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!-- =========================================
+                     DIRECCIÓN PARA DELIVERY
+                     SOLO SE MUESTRA EN DELIVERY
+                     ========================================= -->
+
+                <div
+                    id="campo-delivery"
+                    class="campo oculto"
+                >
+
+
+                    <label for="direccion">
+
+                        Dirección de entrega:
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                        placeholder="Ingrese tu dirección"
+                        autocomplete="street-address"
+                    >
+
+
+                </div>
+
+
+            </fieldset>
+
+
+
+
+            <!-- =========================================
+                 DETALLES DEL PEDIDO
+                 ========================================= -->
+
+            <fieldset>
+
+
+                <legend>
+
+                    Detalles del pedido
+
+                </legend>
+
+
+
+                <div class="campo">
+
+
+                    <label for="indicaciones">
+
+                        Indicacion:
+
+                    </label>
+
+
+                    <textarea
+                        id="indicaciones"
+                        name="indicaciones"
+                        placeholder="Escriba aquí alguna indicación para su pedido..."
+                    ></textarea>
+
+
+                </div>
+
+
+            </fieldset>
+
+
+
+
+            <!-- =========================================
+                 BOTON
+                 ========================================= -->
+
+            <div class="botones">
+
+
+                <!-- ENVIAR -->
+
+                <button
+                    type="submit"
+                    class="btn-enviar"
+                >
+
+                    Realizar pedido
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </main>
+
+
+
+
+    <!-- =========================================
+         PIE DE PÁGINA
+         ========================================= -->
+
+    <footer>
+
+
+        <p>
+
+            © 2026 Carmen Postres Caseros
+
+        </p>
+
+
+    </footer>
+
+            <!-- -->
+        <script>
+
+        const tienda = document.getElementById("tienda");
+        const delivery = document.getElementById("delivery");
+        const infoTienda = document.getElementById("info-tienda");
+        const campoDelivery = document.getElementById("campo-delivery");
+        const direccion = document.getElementById("direccion");
+
+        tienda.addEventListener("change", function() {
+
+            infoTienda.style.display = "block";
+            campoDelivery.style.display = "none";
+            direccion.required = false;
+            direccion.value = "";
+
+        });
+
+        delivery.addEventListener("change", function() {
+
+            infoTienda.style.display = "none";
+            campoDelivery.style.display = "block";
+            direccion.required = true;
+
+        });
+
+        </script>
+
+
+</body>
+
+</html>

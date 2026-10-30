@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO ON-PAGE -->
+    <title>Libro de Reclamaciones Online | Carmen Postres Caseros</title>
+    <meta name="description" content="Utiliza nuestro Libro de Reclamaciones virtual para registrar cualquier queja o reclamo respecto a nuestros productos o servicios de repostería.">
+    <meta name="keywords" content="libro de reclamaciones virtual, reclamos pastelería, atención al cliente Carmen Postres, quejas repostería">
+    <link rel="icon" type="image/png" href="imagen/Logo ofi.png">
+
+    <link rel="stylesheet" href="Datos.css">
+    <link rel="stylesheet" href="css/libro.css">
+    <link rel="stylesheet" href="./css/nosotros.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <a class="logo" href="index.html">
+            <img src="imagen/Logo ofi.png" alt="Logo de Carmen Postres Caseros">
+            <span class="logo-text">
+                <span class="logo-nombre">Carmen</span>
+                <span class="logo-lema">Postres caseros</span>
+            </span>
+        </a>
+
+        <nav class="nav" aria-label="Menú principal">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="Recopilacion_de_datos.html">Pedidos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="libro.html" class="active" aria-current="page">Reclamaciones</a>
+
+            <a href="https://www.instagram.com/pasteleria_carmen78/"
+               target="_blank" rel="noopener noreferrer"
+               class="nav-btn-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="17.5" cy="6.5" r="1"></circle>
+                </svg>
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://www.facebook.com/share/1EcPQEwdfW/"
+               target="_blank" rel="noopener noreferrer"
+               class="nav-btn-icon" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V7a1 1 0 0 1 1-1h3V2z"></path>
+                </svg>
+                <span>Facebook</span>
+            </a>
+
+            <a href="mailto:contacto@pasteleriadcarmen.pe"
+               class="nav-btn-icon icon-only" aria-label="Enviar correo">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <polyline points="3,7 12,13 21,7"></polyline>
+                </svg>
+            </a>
+        </nav>
+    </header>  
+
+
+    <section class="titulo-formulario">
+        <h1>Libro de Reclamaciones</h1>
+        <h2>Tu bienestar es nuestra prioridad</h2>
+        <p>
+            Registra aquí tu queja o reclamo sobre nuestros productos o atención.
+
+        </p>
+    </section>
+
+
+    <main class="contenedor">
+
+
+        <form id="form-reclamo" action="#" method="post" autocomplete="on">
+
+            <!-- =========================================
+                 DATOS DEL CONSUMIDOR
+                 ========================================= -->
+            <fieldset>
+
+                <legend>Datos del consumidor</legend>
+
+                <!-- NOMBRE -->
+                <div class="campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre"
+                           placeholder="Ingrese sus nombres y apellidos"
+                           required autocomplete="name">
+                </div>
+
+                <!-- DOCUMENTO -->
+                <div class="rc-fila">
+
+                    <div class="campo">
+                        <label for="tipo-documento">Tipo de documento:</label>
+                        <select id="tipo-documento" name="tipo_documento" required>
+                            <option value="">Seleccione</option>
+                            <option value="DNI">DNI</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="numero-documento">Número de documento:</label>
+                        <input type="text" id="numero-documento" name="numero_documento"
+                               placeholder="Ingrese su número"
+                               pattern="[A-Za-z0-9]{8,12}" maxlength="12" required
+                               title="Entre 8 y 12 letras o números, sin espacios">
+                    </div>
+
+                </div>
+
+                <!-- DOMICILIO -->
+                <div class="campo">
+                    <label for="domicilio">Dirección:</label>
+                    <input type="text" id="domicilio" name="domicilio"
+                           placeholder="Ingrese su dirección"
+                           required autocomplete="street-address">
+                </div>
+
+                <!-- CORREO -->
+                <div class="campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo"
+                           placeholder="Ingrese su correo"
+                           required autocomplete="email">
+                    <small>Aquí recibirás la copia de tu hoja de reclamación</small>
+                </div>
+
+                <!-- CELULAR -->
+                <div class="campo">
+                    <label for="celular">Número de celular:</label>
+                    <input type="tel" id="celular" name="celular"
+                           placeholder="Ingrese su número"
+                           pattern="[0-9]{9}" maxlength="9" required
+                           autocomplete="tel">
+                    <small>Ingrese 9 números.</small>
+                </div>
+
+            </fieldset>
+
+
+            <!-- =========================================
+                 INFORMACIÓN DEL PEDIDO
+                 ========================================= -->
+            <fieldset>
+
+                <legend>Información del pedido</legend>
+
+                <!-- TIPO DE BIEN -->
+                <div class="opciones">
+                    <div class="opcion">
+                        <input type="radio" id="bien-producto" name="tipo_bien" value="Producto" checked>
+                        <label for="bien-producto">Producto</label>
+                    </div>
+
+                    <div class="opcion">
+                        <input type="radio" id="bien-servicio" name="tipo_bien" value="Servicio">
+                        <label for="bien-servicio">Servicio</label>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO RELACIONADO -->
+                <div class="campo">
+                    <label for="producto">Producto o servicio relacionado:</label>
+                    <input type="text" id="producto" name="producto" list="productos"
+                           placeholder="Seleccione o escriba un producto" required>
+
+                    
+                    <datalist id="productos">
+                        <option value="Keke Casero">
+                        <option value="Keke de Vainilla con Chin Chin">
+                        <option value="Postre Casero">
+                        <option value="Especialidad de la Casa">
+                        <option value="Keke Marmoleado">
+                        <option value="Cupcakes">
+                        <option value="Selva Negra">
+                        <option value="Tres Leches">
+                        <option value="Cheesecake">
+                        <option value="Muffins">
+                        <option value="Brownies">
+                        <option value="Empanadas">
+                        <option value="Sándwiches">
+                    </datalist>
+                </div>
+
+                <div class="rc-fila">
+
+                    <!-- NÚMERO DE PEDIDO -->
+                    <div class="campo">
+                        <label for="numero-pedido">Número de pedido (si lo tiene):</label>
+                        <input type="text" id="numero-pedido" name="numero_pedido"
+                               placeholder="Opcional">
+                    </div>
+
+                    <!-- MONTO -->
+                    <div class="campo">
+                        <label for="monto">Monto reclamado (S/):</label>
+                        <input type="number" id="monto" name="monto"
+                               min="0" step="0.01" placeholder="Opcional">
+                    </div>
+
+                </div>
+
+                <!-- FECHA -->
+                <div class="campo">
+                    <label for="fecha">Fecha del pedido o de lo ocurrido:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+            </fieldset>
+
+
+            <!-- =========================================
+                DETALLE DE LA SOLICITUD
+                 ========================================= -->
+            <fieldset>
+
+                <legend>Detalle de la reclamación</legend>
+
+                <!-- TIPO DE REGISTRO -->
+                <p class="rc-etiqueta" id="etq-tipo">Tipo de registro:</p>
+
+                <div class="opciones" role="radiogroup" aria-labelledby="etq-tipo">
+                    <div class="opcion">
+                        <input type="radio" id="tipo-reclamo" name="tipo_registro" value="Reclamo" required>
+                        <label for="tipo-reclamo">Reclamo</label>
+                    </div>
+
+                    <div class="opcion">
+                        <input type="radio" id="tipo-queja" name="tipo_registro" value="Queja">
+                        <label for="tipo-queja">Queja</label>
+                    </div>
+                </div>
+
+                <!-- DESCRIPCIÓN -->
+                <div class="campo">
+                    <label for="descripcion">Descripción de lo ocurrido:</label>
+                    <textarea id="descripcion" name="descripcion"
+                              placeholder="Cuéntenos con detalle qué ocurrió..."
+                              required></textarea>
+                </div>
+
+                <!-- SOLUCIÓN SOLICITADA -->
+                <div class="campo">
+                    <label for="solucion">Solución que solicita:</label>
+                    <textarea id="solucion" name="solucion"
+                              placeholder="Indique qué espera que hagamos para resolverlo..."
+                              required></textarea>
+                </div>
+
+                <!-- INFORMACIÓN ADICIONAL -->
+                <div class="campo">
+                    <label for="adicional">Información adicional:</label>
+                    <textarea id="adicional" name="informacion_adicional"
+                              placeholder="Opcional"></textarea>
+                </div>
+
+            </fieldset>
+
+
+            <!-- =========================================
+                 ENVÍO 
+                 ========================================= -->
+            <fieldset>
+
+                <legend>Envío</legend>
+
+                <div class="rc-privacidad">
+                    <strong>Aviso de privacidad</strong>
+                    <p>
+                       Usaremos tus datos únicamente para atender y responder tu
+                        reclamo o queja. Para consultas sobre tus datos personales,
+                        contáctanos a través de nuestros canales de atención.
+                    </p>
+                </div>
+
+                <!-- MENSAJE INFORMATIVO -->
+                <div class="rc-info">
+                    <strong>¿Qué sucede después de enviar?</strong>
+                    <ul>
+                        <li>Recibirás en tu correo una copia de tu Hoja de Reclamación, con fecha y hora de presentación.</li>
+                        <li>Te responderemos por escrito en un plazo no mayor a 15 días hábiles.</li>
+                    </ul>
+                </div>
+
+                <!-- MENSAJE DE RESULTADO DEL ENVÍO (lo controla el script) -->
+                <div id="mensaje-envio" class="rc-mensaje" role="status" aria-live="polite" hidden></div>
+
+                <!-- BOTONES -->
+                <div class="botones">
+                    <button type="submit" class="btn-enviar">Enviar reclamación</button>
+                </div>
+
+            </fieldset>
+
+        </form>
+
+    </main>
+
+    <!-- =========================================
+         PIE DE PÁGINA
+         ========================================= -->
+    <footer>
+        <nav class="pie-enlaces" aria-label="Enlaces del pie de página">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="Recopilacion_de_datos.html">Pedidos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="libro-reclamaciones.html">Libro de Reclamaciones</a>
+        </nav>
+        <p> &copy; 2026 Carmen Postres Caseros</p>
+    </footer>
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+    <script>
+
+        // Dirección del servicio que recibirá el reclamo. Vacío = no conectado.
+        const URL_ENVIO = "";
+
+        const formulario = document.getElementById("form-reclamo");
+        const mensaje = document.getElementById("mensaje-envio");
+        const campoFecha = document.getElementById("fecha");
+
+        // La fecha del pedido o incidencia no puede ser futura (fecha local)
+        const hoy = new Date();
+        campoFecha.max = hoy.getFullYear() + "-" +
+            String(hoy.getMonth() + 1).padStart(2, "0") + "-" +
+            String(hoy.getDate()).padStart(2, "0");
+
+        // Muestra un mensaje de estado debajo de la información
+        function mostrarMensaje(texto, tipo) {
+            mensaje.textContent = texto;
+            mensaje.className = "rc-mensaje rc-mensaje-" + tipo;
+            mensaje.hidden = false;
+        }
+
+        formulario.addEventListener("submit", async function (evento) {
+
+            // El navegador ya validó los campos obligatorios antes de llegar aquí
+            evento.preventDefault();
+
+            // Sin servicio conectado: NO se simula ningún registro
+            if (URL_ENVIO === "") {
+                mostrarMensaje(
+                    "El envío todavía no está habilitado y tu reclamación NO ha sido registrada. " +
+                    "Por favor escríbenos a contacto@pasteleriadcarmen.pe o por WhatsApp.",
+                    "error"
+                );
+                return;
+            }
+
+            // Con servicio conectado: se envían los datos
+            const boton = formulario.querySelector(".btn-enviar");
+            boton.disabled = true;
+
+            try {
+                const respuesta = await fetch(URL_ENVIO, {
+                    method: "POST",
+                    body: new FormData(formulario)
+                });
+
+                if (!respuesta.ok) {
+                    throw new Error("Respuesta no válida");
+                }
+
+                formulario.reset();
+                mostrarMensaje(
+                    "Tu reclamación fue enviada. Revisa tu correo electrónico para ver la copia de tu Hoja de Reclamación.",
+                    "ok"
+                );
+
+            } catch (error) {
+                mostrarMensaje(
+                    "No pudimos enviar tu reclamación. Inténtalo de nuevo o escríbenos a contacto@pasteleriadcarmen.pe.",
+                    "error"
+                );
+            }
+
+            boton.disabled = false;
+        });
+
+        // Al limpiar el formulario también se oculta el mensaje
+        formulario.addEventListener("reset", function () {
+            mensaje.hidden = true;
+        });
+
+    </script>
+
+</body>
+
+</html>
